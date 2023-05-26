@@ -9,5 +9,9 @@ div a{
   margin: 0.2rem 0.15rem;
   border-radius: 10rem;
   font-weight: 600;
-  color: blue;
+  color: #4a4ac7;
+}
+.count{
+  padding-left: 4px;
+  font-size: 11px;
 }

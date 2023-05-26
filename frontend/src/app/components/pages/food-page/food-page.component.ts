@@ -6,16 +6,18 @@ import { Food } from 'src/app/shared/models/Food';
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
-  styleUrls: ['./food-page.component.css']
+  styleUrls: ['./food-page.component.css'],
 })
 export class FoodPageComponent {
   food!: Food;
-  constructor(private foodService:FoodService,activatedRoute:ActivatedRoute){
-    activatedRoute.params.subscribe((params)=>{
-      if(params.id){
-        this.food=this.foodService.getFoodById(params.id);
+  constructor(
+    private foodService: FoodService,
+    activatedRoute: ActivatedRoute
+  ) {
+    activatedRoute.params.subscribe((params) => {
+      if (params.id) {
+        this.food = this.foodService.getFoodById(params.id);
       }
-    })
+    });
   }
-
 }

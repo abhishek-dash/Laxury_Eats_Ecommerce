@@ -88,7 +88,10 @@ li a img{
   margin-top: 0.7rem;
   font-size: 1.1rem;
 }
+.currency{
+  font-weight: bold;
+}
 .star{
   width: 15px;
-  
+
 }
