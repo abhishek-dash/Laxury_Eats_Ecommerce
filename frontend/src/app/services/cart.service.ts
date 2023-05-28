@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Cart } from '../shared/models/Cart';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Food } from '../shared/models/Food';
-import { CartItem } from '../shared/models/cartItem';
+import { CartItem } from '../shared/models/CartItem';
 
 @Injectable({
   providedIn: 'root',
@@ -50,7 +50,7 @@ export class CartService {
     localStorage.setItem('Cart',cartJson);
     this.cartSubject.next(this.cart);
   }
-  
+
   private getCartFromLocalStorage():Cart{
     const cartJson = localStorage.getItem('Cart');
     return cartJson?JSON.parse(cartJson):new Cart();
