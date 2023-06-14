@@ -25,6 +25,9 @@ ul li{
   flex-wrap: wrap;
   border-bottom: 1px solid #e4e4e4;
 }
+ul li:hover{
+  text-decoration: underline;
+}
 
 ul li:last-child{
   border: none;

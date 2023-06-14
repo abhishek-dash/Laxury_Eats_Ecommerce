@@ -80,17 +80,17 @@ export const sample_foods: any[] = [
   
   export const sample_users: any[] = [
     {
-      name: "John Doe",
-      email: "john@gmail.com",
+      name: "Abhishek Dash",
+      email: "abhishek@gmail.com",
       password: "12345",
-      address: "Toronto On",
+      address: "Delhi",
       isAdmin: true,
     },
     {
-      name: "Jane Doe",
-      email: "Jane@gmail.com",
+      name: "Debasis Agarwal",
+      email: "debasis@gmail.com",
       password: "12345",
-      address: "Shanghai",
+      address: "Mumbai",
       isAdmin: false,
     },
   ];
