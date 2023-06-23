@@ -6,6 +6,7 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import {MatTooltipModule} from '@angular/material/tooltip'
 import { LoginComponent } from './components/pages/login/login.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'food/:id',component:FoodPageComponent},
   {path:'cart-page',component:CartPageComponent},
   {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterPageComponent}
+  {path:'register',component:RegisterPageComponent},
+  {path:'checkout',component:CheckoutPageComponent}
 ];
 
 @NgModule({

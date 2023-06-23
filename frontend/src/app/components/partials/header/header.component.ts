@@ -13,7 +13,6 @@ export class HeaderComponent {
   user!: User;
   constructor(cartService:CartService,private userService:UserService){
     this.userService.userObservable.subscribe((user)=>{
-      console.log(user)
       this.user = user;
     })
     cartService.getCartObservable().subscribe((cart)=>{
