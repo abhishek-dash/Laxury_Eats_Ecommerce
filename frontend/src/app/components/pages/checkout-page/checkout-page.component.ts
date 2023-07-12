@@ -46,6 +46,7 @@ export class CheckoutPageComponent implements OnInit{
 
         if(!this.order.addressLatLng){
           this.toastrService.warning('Please select your location on the map','Location');
+          return;
         }
 
         this.order.name=this.fc.name.value;
@@ -53,6 +54,7 @@ export class CheckoutPageComponent implements OnInit{
 
         this.orderService.create(this.order).subscribe({
           next:() =>{
+
             this.router.navigateByUrl('/payment');
           },
           error:(errorResponse) =>{
