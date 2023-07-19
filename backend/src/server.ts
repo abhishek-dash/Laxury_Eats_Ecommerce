@@ -1,5 +1,7 @@
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({
+    path:"./config.env"
+});
 
 import express from "express";
 import cors from "cors";
@@ -22,8 +24,8 @@ app.use("/api/users",userRouter);
 app.use("/api/orders",orderRouter);
 
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.listen(port,()=>{
-    console.log("Server is listening on Port->"+port);
+    console.log("Website served on http://localhost:" + port);
     
 })
