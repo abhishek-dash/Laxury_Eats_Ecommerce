@@ -17,8 +17,7 @@ app.use(express.json());
 
 app.use(cors({
     credentials:true,
-    // origin:["http://localhost:4200"]
-    origin:"*"
+    origin:["http://localhost:4200","https://laxuryeats.onrender.com"]
 }))
 
 app.use("/api/foods",foodRouter);
