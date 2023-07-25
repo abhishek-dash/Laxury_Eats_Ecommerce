@@ -7,7 +7,6 @@
     "scripts": {
         "start": "cd backend/built && node server.js",
         "prebuild":"cd backend && npm run build",
-        "build":"cd frontend && npm run build",
-        "both-scripts":"npm-run-all prebuild build"
+        "build":"cd frontend && npm run build"
     }
 }
