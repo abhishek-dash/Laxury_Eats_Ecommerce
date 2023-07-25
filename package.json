@@ -2,7 +2,7 @@
     "name": "laxury-eats",
     "version": "1.0.0",
     "engines": {
-        "node": ">=14.20.1"
+        "node": ">=18 <19"
       },
     "scripts": {
         "start": "cd backend/built && node server.js",
