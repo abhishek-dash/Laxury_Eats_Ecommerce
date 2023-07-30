@@ -15,15 +15,15 @@ dbConnect();
 const app = express();
 app.use(express.json());
 
-// const allowedOrigins = ["http://localhost:5000"];
-// app.use(cors({
-//     credentials: true,
-//     origin: (origin, callback) => {
-//         // Check if the request origin is in the list of allowedOrigins or if it is undefined (server-originated request)
-//         const isAllowedOrigin = (!origin || allowedOrigins.includes(origin));
-//         callback(null, isAllowedOrigin);
-//     }
-// }));
+const allowedOrigins = ["http://localhost:5000"];
+app.use(cors({
+    credentials: true,
+    origin: (origin, callback) => {
+        // Check if the request origin is in the list of allowedOrigins or if it is undefined (server-originated request)
+        const isAllowedOrigin = (!origin || allowedOrigins.includes(origin));
+        callback(null, isAllowedOrigin);
+    }
+}));
 
 app.use("/api/foods",foodRouter);
 app.use("/api/users",userRouter);
