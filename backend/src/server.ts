@@ -15,7 +15,7 @@ dbConnect();
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ["http://localhost:5000","https://laxuryeats.onrender.com"];
+const allowedOrigins = ["http://localhost:5000","http://localhost:4200","https://laxuryeats.onrender.com"];
 app.use(cors({
     credentials: true,
     origin: (origin, callback) => {
