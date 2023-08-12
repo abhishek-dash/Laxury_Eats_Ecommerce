@@ -15,15 +15,21 @@ dbConnect();
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ["http://localhost:5000","http://localhost:4200","https://laxuryeats.onrender.com"];
+// const allowedOrigins = ["http://localhost:5000","http://localhost:4200","https://laxuryeats.onrender.com"];
+// app.use(cors({
+//     credentials: true,
+//     origin: (origin, callback) => {
+//         // Check if the request origin is in the list of allowedOrigins or if it is undefined (server-originated request)
+//         const isAllowedOrigin = (!origin || allowedOrigins.includes(origin));
+//         callback(null, isAllowedOrigin);
+//     }
+// }));
+
 app.use(cors({
-    credentials: true,
-    origin: (origin, callback) => {
-        // Check if the request origin is in the list of allowedOrigins or if it is undefined (server-originated request)
-        const isAllowedOrigin = (!origin || allowedOrigins.includes(origin));
-        callback(null, isAllowedOrigin);
-    }
+    credentials:true,
+    origin:["http://localhost:4200","http://localhost:5000","https://laxuryeats.onrender.com"]
 }));
+
 
 app.use("/api/foods",foodRouter);
 app.use("/api/users",userRouter);
