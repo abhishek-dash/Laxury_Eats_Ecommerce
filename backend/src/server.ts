@@ -14,18 +14,22 @@ import orderRouter from './routers/order.router';
 dbConnect();
 const app = express();
 app.use(express.json());
-app.use(cors());
-app.options('*',cors());
+// app.use(cors());
+// app.options('*',cors());
 
-// const allowedOrigins = ["http://localhost:5000","http://localhost:4200","https://laxuryeats.onrender.com"];
-// app.use(cors({
-//     credentials: true,
-//     origin: (origin, callback) => {
-//         // Check if the request origin is in the list of allowedOrigins or if it is undefined (server-originated request)
-//         const isAllowedOrigin = (!origin || allowedOrigins.includes(origin));
-//         callback(null, isAllowedOrigin);
-//     }
-// }));
+// In your Express backend
+const allowedOrigins = ['http://localhost:4200', 'https://laxuryeats.onrender.com'];
+
+// Configure CORS with options
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+}));
 
 // app.use(cors({
 //     credentials:true,
