@@ -14,6 +14,7 @@ import orderRouter from './routers/order.router';
 dbConnect();
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // const allowedOrigins = ["http://localhost:5000","http://localhost:4200","https://laxuryeats.onrender.com"];
 // app.use(cors({
@@ -25,10 +26,10 @@ app.use(express.json());
 //     }
 // }));
 
-app.use(cors({
-    credentials:true,
-    origin:["http://localhost:4200","http://localhost:5000","https://laxuryeats.onrender.com"]
-}));
+// app.use(cors({
+//     credentials:true,
+//     origin:["http://localhost:4200","http://localhost:5000","https://laxuryeats.onrender.com"]
+// }));
 
 
 app.use("/api/foods",foodRouter);
