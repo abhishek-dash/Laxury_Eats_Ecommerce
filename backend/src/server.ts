@@ -18,7 +18,7 @@ app.use(express.json());
 // app.options('*',cors());
 
 // In your Express backend
-// const allowedOrigins = ['http://localhost:4200', 'https://laxuryeats.onrender.com'];
+const allowedOrigins = ['http://localhost:4200', 'https://laxuryeats.onrender.com'];
 
 // Configure CORS with options
 
@@ -35,7 +35,7 @@ app.use(express.json());
 
 app.use(cors({
     credentials:true,
-    origin:["http://localhost:4200"]
+    origin:allowedOrigins
 }));
 
 
