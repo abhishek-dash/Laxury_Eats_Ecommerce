@@ -1,8 +1,6 @@
 import dotenv from 'dotenv';
 import path from 'path';
-dotenv.config({
-    path:"./config.env"
-});
+dotenv.config();
 
 import express from "express";
 import cors from "cors";
@@ -14,39 +12,6 @@ import orderRouter from './routers/order.router';
 dbConnect();
 const app = express();
 app.use(express.json());
-
-const corsOptions = {
-  origin: 'https://laxuryeats.onrender.com',
-  methods: 'GET,PUT,POST,DELETE',
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
-
-
-// app.use(cors());
-// app.options('*',cors());
-
-// In your Express backend
-// const allowedOrigins = ['http://localhost:4200', 'https://laxuryeats.onrender.com'];
-
-// Configure CORS with options
-
-
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-// }));
-
-// app.use(cors({
-//     credentials:true,
-//     origin:allowedOrigins
-// }));
 
 
 app.use("/api/foods",foodRouter);
