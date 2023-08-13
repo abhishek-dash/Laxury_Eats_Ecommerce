@@ -4,10 +4,10 @@ import asyncHandler from 'express-async-handler';
 import { FoodModel } from "../models/food.model";
 const router=Router();
 
-router.use((req,res,next)=>{
-    res.header("Access-Control-Allow-Origin","*");
-    res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
-})
+// router.use((req,res,next)=>{
+//     res.header("Access-Control-Allow-Origin","*");
+//     res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+// })
 
 router.get("/seed",asyncHandler(
     async(req,res) =>{

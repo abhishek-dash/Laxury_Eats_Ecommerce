@@ -18,25 +18,25 @@ app.use(express.json());
 // app.options('*',cors());
 
 // In your Express backend
-const allowedOrigins = ['http://localhost:4200', 'https://laxuryeats.onrender.com'];
+// const allowedOrigins = ['http://localhost:4200', 'https://laxuryeats.onrender.com'];
 
 // Configure CORS with options
 
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-}));
-
 // app.use(cors({
-//     credentials:true,
-//     origin:["http://localhost:4200","http://localhost:5000","https://laxuryeats.onrender.com"]
+//   origin: function (origin, callback) {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
 // }));
+
+app.use(cors({
+    credentials:true,
+    origin:["http://localhost:4200"]
+}));
 
 
 app.use("/api/foods",foodRouter);
