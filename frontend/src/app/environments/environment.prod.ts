@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://laxuryeats.onrender.com', // After deployment
+  apiBaseUrl: 'http://localhost:5000', // After deployment
 };
