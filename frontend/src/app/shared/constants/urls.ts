@@ -1,6 +1,5 @@
 import { environment } from "src/app/environments/environment";
 
-// const BASE_URL = environment.production?'' : 'http://localhost:5000';
 const BASE_URL = environment.apiBaseUrl;
 console.log(BASE_URL);
 
