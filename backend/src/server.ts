@@ -18,8 +18,10 @@ app.use(express.json());
 //   origin:["http://localhost:4200"]
 // }))
 
+const allowedOrigin = ['https://laxuryeats.onrender.com',"http://localhost:4200"]
+
 const corsOptions = {
-  origin: 'https://laxuryeats.onrender.com',
+  origin: allowedOrigin,
   methods: 'GET,PUT,POST,DELETE',
   optionsSuccessStatus: 200,
 };

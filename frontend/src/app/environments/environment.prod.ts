@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: '', // After deployment
+  apiBaseUrl: 'https://laxuryeats.onrender.com', // After deployment
 };
