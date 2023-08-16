@@ -1,7 +1,14 @@
 import { environment } from "src/app/environments/environment";
 
-const BASE_URL = environment.apiBaseUrl;
-console.log(BASE_URL);
+// if(environment.production){
+//   const BASE_URL = "https://laxuryeats.onrender.com"
+// }
+// else{
+//   const  BASE_URL = "http://localhost:5000"
+// }
+const BASE_URL = environment.production?"https://laxuryeats.onrender.com":"http://localhost:5000";
+// const BASE_URL = environment.apiBaseUrl;
+console.log(BASE_URL + "development");
 
 
 export const FOODS_URL = BASE_URL + '/api/foods';
